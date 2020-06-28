@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *, *::after, *::before {
     box-sizing: border-box;
     font-family: Gotham Rounded, sans-serif;
@@ -10,6 +12,8 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+    font-family: poppins;
+    font-weight: 600;
 }
 
 .clock {
@@ -17,11 +21,12 @@ body {
     height: 350px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    border: 2px solid black;
+    border: 20px solid black;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 0 30px, 0 0 40px rgba(0, 0, 0, 0.6), 0 0 4px rgba(255, 255, 255, 1)
 }
 
 .clock .number {
@@ -32,6 +37,8 @@ body {
     text-align: center;
     transform: rotate(var(--rotation));
     font-size: 1.5rem;
+    padding: 10px;
+
 }
 
 .clock .number1 { --rotation: 30deg; }
@@ -62,7 +69,7 @@ body {
     transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
 } */
 
-.clock::after {
+.clock::before {
     content: '';
     position: absolute;
     background-color: black;
@@ -120,7 +127,7 @@ body {
 .hour::before {
     content: '';
     height: 85px;
-    width: 15px;
+    width: 8px;
     background-color: black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -129,8 +136,8 @@ body {
 .minute::before {
     content: '';
     height: 110px;
-    width: 8px;
-    background-color: green;
+    width: 6px;
+    background-color: #353333;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -138,8 +145,20 @@ body {
 .second::before {
     content: '';
     height: 130px;
-    width: 5px;
+    width: 4px;
     background-color: red;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+#line {
+    height: 10px;
+    width: 5px;
+    background-color:black;
+    z-index: 100;
+    position: absolute;
+    margin-left: 5px;
+    padding-left: 5px;
+    top: 0;
+
 }

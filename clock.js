@@ -20,12 +20,13 @@ function setRotation(element, rotationRatio) {
 
 setClock(); */
 
-const multiplier = 6;
-const hr = document.querySelector(".hour");
-const mn = document.querySelector(".minute");
-const sc = document.querySelector(".second");
 
 setInterval(() =>{
+    const multiplier = 6;
+    const hr = document.querySelector("#hour");
+    const mn = document.querySelector("#minute");
+    const sc = document.querySelector("#second");
+
     let day = new Date();
     let hour = day.getHours()*30;
     let minute = day.getMinutes()*multiplier;
